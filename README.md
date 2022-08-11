@@ -69,12 +69,12 @@ pip install -r requirements.txt
 Train FCBFormer on the train split of a dataset:
 
 ```
-python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
+python train.py --dataset=[train data] --data-root=[path]
 ```
 
-+ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
++ Replace `[train data]` with training dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (training on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (training on CVC-ClinicDB).
++ Replace `[path]` with path to directory containing `/images` and `/masks` directories (training on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (training on CVC-ClinicDB).
 
 + To train on multiple GPUs, include `--multi-gpu=true`.
 
@@ -83,28 +83,28 @@ python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
 Generate predictions from a trained model for a test split. Note, the test split can be from a different dataset to the train split:
 
 ```
-python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
+python predict.py --train-dataset=[train data] --test-dataset=[test data] --data-root=[path]
 ```
 
-+ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
++ Replace `[train data]` with training dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[TEST DATA]` with testing dataset name (options: `Kvasir`; `CVC`).
++ Replace `[test data]` with testing dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
++ Replace `[path]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
 
 ### 2.4 Evaluation
 
 Evaluate pre-computed predictions from a trained model for a test split. Note, the test split can be from a different dataset to the train split:
 
 ```
-python eval.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
+python eval.py --train-dataset=[train data] --test-dataset=[test data] --data-root=[path]
 ```
 
-+ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
++ Replace `[train data]` with training dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[TEST DATA]` with testing dataset name (options: `Kvasir`; `CVC`).
++ Replace `[test data]` with testing dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
++ Replace `[path]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
 
 ## 3. License
 
@@ -139,7 +139,7 @@ This work makes use of data from the Kvasir-SEG dataset, available at https://da
 
 This work makes use of data from the CVC-ClinicDB dataset, available at https://polyp.grand-challenge.org/CVCClinicDB/.
 
-This repository uses code (`./Models/pvt_v2.py`) from the [PVT/PVTv2](https://github.com/whai362/PVT) repository.
+This repository includes code (`./Models/pvt_v2.py`) ported from the [PVT/PVTv2](https://github.com/whai362/PVT) repository.
 
 ## 7. Contact
 
