@@ -1,6 +1,6 @@
 # FCBFormer
 
-Official codebase for: [FCN-Transformer Feature Fusion for Polyp Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-12053-4_65) (MIUA 2022 paper)
+Official code repository for: [FCN-Transformer Feature Fusion for Polyp Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-12053-4_65) (MIUA 2022 paper)
 
 Authors: [Edward Sanderson](https://scholar.google.com/citations?user=ea4c7r0AAAAJ&hl=en&oi=ao) and [Bogdan J. Matuszewski](https://scholar.google.co.uk/citations?user=QlUO_oAAAAAJ&hl=en)
 
@@ -35,3 +35,102 @@ this end, we propose a new architecture for full-size segmentation which leverag
 		Figure 3: Visualisation of the benefit of the fully convolutional branch (FCB)
 	</em>
 </p>
+
+## 2. Usage
+
+### 2.1 Preparation
+
++ Create and activate virtual environment:
+
+```
+python3 -m venv ~/FCBFormer-env
+source ~/FCBFormer-env/bin/activate
+```
+
++ Clone the repository and navigate to new directory:
+
+```
+git clone https://github.com/ESandML/FCBFormer
+cd ./FCBFormer
+```
+
++ Install the requirements:
+
+```
+pip install -r requirements.txt
+```
+
++ Download and extract the [Kvasir-SEG](https://datasets.simula.no/downloads/kvasir-seg.zip) and the [CVC-ClinicDB](https://www.dropbox.com/s/p5qe9eotetjnbmq/CVC-ClinicDB.rar?dl=0) datasets.
+
++ Download the [PVTv2-B3](https://github.com/whai362/PVT/releases/download/v2/pvt_v2_b3.pth) weights to `./`
+
+### 2.2 Training
+
+```
+python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
+```
+
++ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
+
++ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (training on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (training on CVC-ClinicDB).
+
++ To train on multiple GPUs, include `--multi-gpu=true`.
+
+### 2.3 Prediction
+
+```
+python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
+```
+
++ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
+
++ Replace `[TEST DATA]` with testing dataset name (options: `Kvasir`; `CVC`).
+
++ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
+
+### 2.4 Evaluation
+
+```
+python eval.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
+```
+
++ Replace `[TRAIN DATA]` with training dataset name (options: `Kvasir`; `CVC`).
+
++ Replace `[TEST DATA]` with testing dataset name (options: `Kvasir`; `CVC`).
+
++ Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
+
+## 3. License
+
+This repository is released under the Apache 2.0 license as found in the [LICENSE](https://github.com/ESandML/FCBFormer/blob/main/LICENSE) file.
+
+## 4. Citation
+
+If you use this work, please consider citing us:
+
+```bibtex
+@inproceedings{sanderson2022fcn,
+  title={FCN-Transformer Feature Fusion for Polyp Segmentation},
+  author={Sanderson, Edward and Matuszewski, Bogdan J},
+  booktitle={Annual Conference on Medical Image Understanding and Analysis},
+  pages={892--907},
+  year={2022},
+  organization={Springer}
+}
+```
+
+## 5. Commercial use
+
+We allow commerical use of this work, as permitted by the [LICENSE](https://github.com/ESandML/FCBFormer/blob/main/LICENSE). However, where possible, please inform us of this use for the facilitation of our impact case studies.
+
+## 6. Acknowledgements
+
+This work was supported by the Science and Technology Facilities Council grant number ST/S005404/1.
+
+This work was performed using a DiRAC Director’s Discretionary award. The work was carried out on the Cambridge Service for Data Driven Discovery (CSD3), part of which is operated by the University of Cambridge Research Computing on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk). The DiRAC component of CSD3 was funded by BEIS capital funding via STFC capital grants ST/P002307/1 and ST/R002452/1 and STFC operations grant ST/R00689X/1. DiRAC is part of the National e-Infrastructure.
+
+This repository uses code from the [PVT/PVTv2](https://github.com/whai362/PVT) repository.
+
+## 7. Contact
+
+Please email esanderson4@uclan.ac.uk
