@@ -74,7 +74,7 @@ python train.py --dataset=[train data] --data-root=[path]
 
 + Replace `[train data]` with training dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[path]` with path to directory containing `/images` and `/masks` directories (training on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (training on CVC-ClinicDB).
++ Replace `[path]` with path to parent directory of `/images` and `/masks` directories (training on Kvasir-SEG); or parent directory of `/Original` and `/Ground Truth` directories (training on CVC-ClinicDB).
 
 + To train on multiple GPUs, include `--multi-gpu=true`.
 
@@ -90,7 +90,7 @@ python predict.py --train-dataset=[train data] --test-dataset=[test data] --data
 
 + Replace `[test data]` with testing dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[path]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
++ Replace `[path]` with path to parent directory of `/images` and `/masks` directories (testing on Kvasir-SEG); or parent directory of `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
 
 ### 2.4 Evaluation
 
@@ -104,7 +104,7 @@ python eval.py --train-dataset=[train data] --test-dataset=[test data] --data-ro
 
 + Replace `[test data]` with testing dataset name (options: `Kvasir`; `CVC`).
 
-+ Replace `[path]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
++ Replace `[path]` with path to parent directory of `/images` and `/masks` directories (testing on Kvasir-SEG); or parent directory of `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
 
 ## 3. License
 
