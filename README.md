@@ -66,6 +66,8 @@ pip install -r requirements.txt
 
 ### 2.2 Training
 
+Train FCBFormer on the train split of a dataset:
+
 ```
 python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
 ```
@@ -78,6 +80,8 @@ python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
 
 ### 2.3 Prediction
 
+Generate predictions from a trained model for the test split of a dataset. Note, the test split can be from a different dataset to the train split:
+
 ```
 python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
 ```
@@ -89,6 +93,8 @@ python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data
 + Replace `[PATH]` with path to directory containing `/images` and `/masks` directories (testing on Kvasir-SEG) or directory containing `/Original` and `/Ground Truth` directories (testing on CVC-ClinicDB).
 
 ### 2.4 Evaluation
+
+Evaluated pre-computed predictions from a trained model for the test split of a dataset. Note, the test split can be from a different dataset to the train split:
 
 ```
 python eval.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
