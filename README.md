@@ -80,7 +80,7 @@ python train.py --dataset=[TRAIN DATA] --data-root=[PATH]
 
 ### 2.3 Prediction
 
-Generate predictions from a trained model for the test split of a dataset. Note, the test split can be from a different dataset to the train split:
+Generate predictions from a trained model for a test split. Note, the test split can be from a different dataset to the train split:
 
 ```
 python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
@@ -94,7 +94,7 @@ python predict.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data
 
 ### 2.4 Evaluation
 
-Evaluated pre-computed predictions from a trained model for the test split of a dataset. Note, the test split can be from a different dataset to the train split:
+Evaluate pre-computed predictions from a trained model for a test split. Note, the test split can be from a different dataset to the train split:
 
 ```
 python eval.py --train-dataset=[TRAIN DATA] --test-dataset=[TEST DATA] --data-root=[PATH]
