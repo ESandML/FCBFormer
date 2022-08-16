@@ -202,7 +202,9 @@ def get_args():
     parser.add_argument(
         "--learning-rate-scheduler-minimum", type=float, default=1e-6, dest="lrs_min"
     )
-    parser.add_argument("--multi-gpu", type=str, default="false", dest="mgpu")
+    parser.add_argument(
+        "--multi-gpu", type=str, default="false", dest="mgpu", choices=["true", "false"]
+    )
 
     return parser.parse_args()
 
