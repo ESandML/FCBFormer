@@ -1,8 +1,12 @@
 # FCBFormer
 
-Official code repository for: [FCN-Transformer Feature Fusion for Polyp Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-12053-4_65) (MIUA 2022 paper)
+Official code repository for: FCN-Transformer Feature Fusion for Polyp Segmentation (MIUA 2022 paper)
 
 Authors: [Edward Sanderson](https://scholar.google.com/citations?user=ea4c7r0AAAAJ&hl=en&oi=ao) and [Bogdan J. Matuszewski](https://scholar.google.co.uk/citations?user=QlUO_oAAAAAJ&hl=en)
+
+Links to the paper:
++ [Springer (Open Access)](https://link.springer.com/chapter/10.1007/978-3-031-12053-4_65)
++ [arXiv](https://arxiv.org/abs/2208.08352)
 
 ## 1. Overview
 
@@ -141,6 +145,8 @@ This work makes use of data from the CVC-ClinicDB dataset, available at https://
 
 This repository includes code (`./Models/pvt_v2.py`) ported from the [PVT/PVTv2](https://github.com/whai362/PVT) repository.
 
-## 7. Contact
+## 7. Additional information
 
-Please email esanderson4@uclan.ac.uk
+Links: [AIdDeCo Project](https://www.uclan.ac.uk/research/activity/machine-learning-cancer-detection), [CVML Group](https://www.uclan.ac.uk/research/activity/cvml)
+
+Contact: esanderson4@uclan.ac.uk
