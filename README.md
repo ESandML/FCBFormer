@@ -1,3 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fcn-transformer-feature-fusion-for-polyp/medical-image-segmentation-on-kvasir-seg)](https://paperswithcode.com/sota/medical-image-segmentation-on-kvasir-seg?p=fcn-transformer-feature-fusion-for-polyp)
+	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/fcn-transformer-feature-fusion-for-polyp/medical-image-segmentation-on-cvc-clinicdb)](https://paperswithcode.com/sota/medical-image-segmentation-on-cvc-clinicdb?p=fcn-transformer-feature-fusion-for-polyp)
+
 # FCBFormer
 
 Official code repository for: FCN-Transformer Feature Fusion for Polyp Segmentation (MIUA 2022 paper)
