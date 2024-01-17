@@ -118,7 +118,16 @@ python eval.py --train-dataset=[train data] --test-dataset=[test data] --data-ro
 
 This repository is released under the Apache 2.0 license as found in the [LICENSE](https://github.com/ESandML/FCBFormer/blob/main/LICENSE) file.
 
-## 4. Citation
+## 4. Pretrained weights
+
+
+
+| Training data | Download            |
+|---------------|---------------------|
+| Kvasir-SEG    |[Google Drive](https://drive.google.com/file/d/1ILaudmcBvuuQ-FNZx7xjsCFZ5vZG7VSx/view?usp=drive_link)|
+| CVC-ClinicDB  |[Google Drive](https://drive.google.com/file/d/1_6MzRjm3fp0x_ec9QHTDdBmKXVs68-r-/view?usp=drive_link)|
+
+## 5. Citation
 
 If you use this work, please consider citing us:
 
@@ -133,11 +142,11 @@ If you use this work, please consider citing us:
 }
 ```
 
-## 5. Commercial use
+## 6. Commercial use
 
 We allow commerical use of this work, as permitted by the [LICENSE](https://github.com/ESandML/FCBFormer/blob/main/LICENSE). However, where possible, please inform us of this use for the facilitation of our impact case studies.
 
-## 6. Acknowledgements
+## 7. Acknowledgements
 
 This work was supported by the Science and Technology Facilities Council [grant number ST/S005404/1].
 
@@ -149,7 +158,7 @@ This work makes use of data from the CVC-ClinicDB dataset, available at https://
 
 This repository includes code (`./Models/pvt_v2.py`) ported from the [PVT/PVTv2](https://github.com/whai362/PVT) repository.
 
-## 7. Additional information
+## 8. Additional information
 
 Links: [AIdDeCo Project](https://www.uclan.ac.uk/research/activity/machine-learning-cancer-detection), [CVML Group](https://www.uclan.ac.uk/research/activity/cvml)
 
